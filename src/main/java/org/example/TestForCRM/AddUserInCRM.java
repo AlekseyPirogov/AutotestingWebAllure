@@ -1,5 +1,6 @@
 package org.example.TestForCRM;
 
+import io.qameta.allure.Step;
 import org.example.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,21 +34,25 @@ public class AddUserInCRM extends AbstractPage {
     @FindBy(xpath = "//input[@placeholder='Search Customer']")
     private WebElement searchField;
 
+    @Step("Нажатие по кнопке \"Bank Manager Login\"")
     public AddUserInCRM clickBtnBankManagerLogin() {
         this.btnBankManagerLogin.click();
         return this;
     }
 
+    @Step("Нажатие по кнопке \"Customers\"")
     public AddUserInCRM clickBtnCustomer() {
         this.btnCustomer.click();
         return this;
     }
 
+    @Step("Нажатие по кнопке \"Add Customer\"")
     public AddUserInCRM clickBtnAddCustomer() {
         this.btnAddCustomer.click();
         return this;
     }
 
+    @Step("Ввод имени")
     public AddUserInCRM inputFistName(String firstName) {
         this.inputFistName.click();
         this.inputFistName.clear();
@@ -55,6 +60,7 @@ public class AddUserInCRM extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод фамилии")
     public AddUserInCRM inputLastName(String lastName) {
         this.inputLastName.click();
         this.inputLastName.clear();
@@ -62,6 +68,7 @@ public class AddUserInCRM extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод индекса")
     public AddUserInCRM inputPostCode(String postCode) {
         this.inputPostCode.click();
         this.inputPostCode.clear();
@@ -69,16 +76,19 @@ public class AddUserInCRM extends AbstractPage {
         return this;
     }
 
+    @Step("Нажатие по кнопке \"Add Customer\"")
     public AddUserInCRM clickBtnAddCustomerForm() {
         this.btnAddCustomerForm.click();
         return this;
     }
 
+    @Step("Обработка javaScript")
     public AddUserInCRM acceptJavaScript() throws InterruptedException {
         actionAcceptJavaScript();
         return this;
     }
 
+    @Step("Ввод данных в поле для поиска")
     public AddUserInCRM inputInSearchField(String firstName) {
         this.searchField.click();
         this.searchField.clear();
@@ -87,22 +97,27 @@ public class AddUserInCRM extends AbstractPage {
     }
 
     // Пример набора заглушек вынесенных в отдельный класс AddAccountInCRM:
+    @Step("Открытие аккаунта")
     public AddUserInCRM openAccount(){
         return this;
     }
 
+    @Step("Выбор пользователя")
     public AddUserInCRM selectUser() {
         return this;
     }
 
+    @Step("Выбор валюты")
     public AddUserInCRM selectCurrency() {
         return this;
     }
 
+    @Step("Нажатие кнопки \"Process\"")
     public AddUserInCRM clickBtnProcess() {
         return this;
     }
 
+    @Step("Удаление пользователя")
     public AddUserInCRM deleteUser(String firstName) {
        return this;
     }

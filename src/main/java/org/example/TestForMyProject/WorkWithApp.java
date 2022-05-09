@@ -1,5 +1,6 @@
 package org.example.TestForMyProject;
 
+import io.qameta.allure.Step;
 import org.example.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -106,6 +107,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод имени")
     // Атутентификация пользователя:
     public WorkWithApp inputUsername(String username){
         inputUsername.click();
@@ -114,6 +116,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод пользователя")
     public WorkWithApp inputPassword(String password){
         inputPassword.click();
         inputPassword.clear();
@@ -121,63 +124,75 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Нажатие кнопки \"Login\"")
     public WorkWithApp clickLoginButton() {
         loginButton.click();
         return this;
     }
 
+    @Step("Сброс аутентификации")
     public WorkWithApp clickReloadAuth() {
         reloadAuth.click();
         return this;
     }
 
     // Работа с главным меню:
+    @Step("Открытие главного меню")
     public WorkWithApp openMainMenu() {
         openMainMenu.click();
         return this;
     }
 
+    @Step("Закрытие главного меню")
     public WorkWithApp closeMainMenu() {
         closeMainMenu.click();
         return this;
     }
 
+    @Step("Выход из приложения/аккаунта")
     public WorkWithApp loguot() {
         loguot.click();
         return this;
     }
 
+    @Step("Сброс приложения")
     public WorkWithApp resetUI() {
         resetUI.click();
         return this;
     }
 
+    @Step("Переход в футтер")
     // Работа с содержимым страницы приложения:
     public WorkWithApp goToFotter() {
         goToFotter.click();
         return this;
     }
 
+    @Step("Переход в заголовок")
     public WorkWithApp goToHeader() {
         goToHeader.click();
         return this;
     }
 
+    @Step("Возврат к товарам")
     public WorkWithApp backToProducts() {
         backToProducts.click();
         return this;
     }
 
+    @Step("Продолжение покупок")
     public WorkWithApp continueShopping() {
         continueShopping.click();
         return this;
     }
 
+    @Step("Переход к оформлению заказа")
     public WorkWithApp checkout() {
         checkout.click();
         return this;
     }
 
+    @Step("Ввод имени")
     public WorkWithApp inputFirstName(String firstName) {
         this.firstName.click();
         this.firstName.clear();
@@ -185,6 +200,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод фамилии")
     public WorkWithApp inputLastName(String lastName) {
         this.lastName.click();
         this.lastName.clear();
@@ -192,6 +208,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Ввод индекса")
     public WorkWithApp inputPostCode(String postCode) {
         this.postCode.click();
         this.postCode.clear();
@@ -199,53 +216,63 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Продолжение покупок")
     public WorkWithApp continueProc() {
         continueProc.click();
         return this;
     }
 
+    @Step("Завершение процедуры оформления заказа")
     public WorkWithApp finishProc() {
         this.finish.click();
         return this;
     }
 
     // Разные варианты сортировки данных на странице:
+    @Step("Выбор поля для сортировки данных")
     public WorkWithApp selectFieldSort() {
         selectFieldSort.click();
         return this;
     }
 
+    @Step("Сортировка в прямом алфавитном порядке")
     public WorkWithApp sortByAZ() {
         sortByAZ.click();
         return this;
     }
 
+    @Step("Сортировка в обратном алфавитном порядке")
     public WorkWithApp sortByZA() {
         sortByZA.click();
         return this;
     }
 
+    @Step("Сортировка в порядке возрастания цены")
     public WorkWithApp sortByLohi() {
         sortByLohi.click();
         return this;
     }
 
+    @Step("Сортировка в порядке убывания цены")
     public WorkWithApp sortByHilo() {
         sortByHilo.click();
         return this;
     }
 
     // Работа с корзиной:
+    @Step("Открытие корзины")
     public WorkWithApp openShoppingCart() {
         openShoppingCart.click();
         return this;
     }
 
+    @Step("Закрытие корзины")
     public WorkWithApp closeShoppingCart() {
         closeShoppingCart.click();
         return this;
     }
 
+    @Step("Добавление товара в корзину")
     public WorkWithApp addToCartItem(String item) {
         if (item.contains("sauce-labs-backpack")) addToCartItemSauceLabsBackpack.click();
         if (item.contains("sauce-labs-onesie")) addToCartItemSauceLabsOnesie.click();
@@ -254,6 +281,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Удаления товара из корзины")
     public WorkWithApp removeItemInCart(String item) {
         if (item.contains("sauce-labs-backpack")) removeInCartSauceLabsBackpack.click();
         if (item.contains("sauce-labs-onesie")) removeInCartSauceLabsOnesie.click();
@@ -262,6 +290,7 @@ public class WorkWithApp extends AbstractPage {
         return this;
     }
 
+    @Step("Просмотр информации о товаре")
     public WorkWithApp viewItem(int item) {
         if (item == 2) viewItem2.click();
         if (item == 3) viewItem3.click();

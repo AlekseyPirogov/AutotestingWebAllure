@@ -27,5 +27,4 @@ public class AbstractPage {
             e.getMessage();
         }
     }
-
 }
